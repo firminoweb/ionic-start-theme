@@ -1,5 +1,12 @@
 Ionic 4 Start Theme
 ==========
+Ionic 4 start theme experiencing the best of new features about Angular 6 and Ionic 4. 
+
+* Angular6
+* @ionic/angular 4.0.0-alpha.7
+* Ionic Native 5 Beta
+* Ionic CLI 4.0.0 RC
+* Capacitor experiments
 
 
 Requirements

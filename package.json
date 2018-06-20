@@ -1,19 +1,16 @@
 {
   "name": "ionic4-start-theme",
   "description": "Ionic 4 Start Theme",
-  "author": "Okode",
-  "homepage": "https://www.okode.com/",
+  "author": "Ionic Theme",
+  "homepage": "https://ionictheme.com",
   "scripts": {
     "ng": "ng",
     "start": "ionic serve",
     "build": "ionic build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "fetch-plugins": "okode-app-scripts fetch-plugins",
-    "strip-dev-code": "okode-strip-dev-code"
+    "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "6.0.4",
     "@angular/core": "6.0.4",
@@ -30,7 +27,6 @@
     "@ionic-native/status-bar": "5.0.0-beta.10",
     "@ionic/angular": "4.0.0-alpha.7",
     "@ionic/schematics-angular": "latest",
-    "aws-sdk": "2.250.1",
     "cordova-android": "7.1.0",
     "cordova-fabric-plugin": "1.1.14-dev",
     "cordova-ios": "4.5.4",
@@ -53,7 +49,6 @@
     "@angular/compiler": "6.0.4",
     "@angular/compiler-cli": "6.0.4",
     "@angular/language-service": "6.0.4",
-    "@okode/app-scripts": "https://github.com/okode/okode-app-scripts#develop",
     "@types/cordova": "0.0.34",
     "@types/jasmine": "2.8.8",
     "@types/jasminewd2": "2.0.3",

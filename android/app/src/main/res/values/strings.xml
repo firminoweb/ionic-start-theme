@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">ionic4</string>
-    <string name="title_activity_main">ionic4</string>
-    <string name="package_name">com.ionicframework.ionic4startheme</string>
-    <string name="fileprovider_authority">com.ionicframework.ionic4startheme.fileprovider</string>
-    <string name="custom_url_scheme">com.ionicframework.ionic4startheme</string>
-</resources>

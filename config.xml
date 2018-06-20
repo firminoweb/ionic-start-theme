@@ -18,7 +18,7 @@
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
@@ -76,13 +76,13 @@
         <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
-        <edit-config mode="merge" target="NSCameraUsageDescription" file="*-Info.plist">
+        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
             <string>Acceso a la cámara</string>
         </edit-config>
-        <edit-config mode="merge" target="NSPhotoLibraryUsageDescription" file="*-Info.plist">
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
             <string>Necesario para acceder a la biblioteca de fotos y obtener fotos desde allí</string>
         </edit-config>
-        <edit-config mode="merge" target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist">
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
             <string>Necesario para acceder y guardar las fotos en la biblioteca</string>
         </edit-config>
     </platform>
