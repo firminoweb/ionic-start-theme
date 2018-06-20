@@ -1,0 +1,6 @@
+{
+  "appId": "com.ionicframework.ionic4startheme",
+  "appName": "ionic4",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

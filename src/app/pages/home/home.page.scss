@@ -1,0 +1,98 @@
+ion-header ion-icon {
+  font-size: 24px;
+}
+ion-toolbar .tabs {
+  display: flex;
+  justify-content: center;
+  .tab {
+    text-align: center;
+    width: calc(100% / 3);
+    color: #8c8c8c;
+    &.active {
+      color: #488aff;
+    }
+    ion-icon {
+      font-size: 30px;
+    }
+    .label {
+      font-size: 10px;
+      margin-top: -2px;
+    }
+  }
+}
+h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 32px;
+  line-height: 32px;
+  margin: 8px 0 16px 16px;
+}
+.movies-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .movie {
+    flex: 0 170px;
+    padding: 15px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    cursor: pointer;
+    div.poster {
+      position: relative;
+      width: 100%;
+      height: 230px;
+      background: #eee;
+      border-radius: 6px;
+      img.poster, img.poster-effect {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 6px;
+        z-index: 9999;
+        position: relative;
+        margin-bottom: -215px;
+        -webkit-transform: translateZ(0);
+        -webkit-perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        &.poster-effect {
+          z-index: 999;
+          opacity: 0.4;
+          transform: scale(0.95) translateZ(0);
+          filter: blur(4px);
+        }
+      }
+    }
+    .title {
+      width: 100%;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      font-size: 15px;
+      line-height: 15px;
+      padding: 20px 0 5px 0;
+    }
+    .year {
+      width: 50%;
+      color: #aaa;
+      font-size: 12px;
+    }
+    .vote {
+      width: 50%;
+      text-align: right;
+      color: #aaa;
+      font-size: 12px;
+      b {
+        font-weight: 800;
+        color: #000;
+      }
+      ion-icon {
+        color: #fbcd00;
+        line-height: 0px;
+        position: absolute;
+        margin: 1px 0 0 -14px;
+      }
+    }
+  }
+}

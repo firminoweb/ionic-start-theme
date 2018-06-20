@@ -1,0 +1,7 @@
+{
+  "name": "ionic4",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
