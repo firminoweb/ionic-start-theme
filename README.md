@@ -35,11 +35,11 @@ $ ionic serve -l
 ___
 
 ## Know Ionic 3 Start Theme
-==========
+
 * [Ionic 3 Start Theme (Github)](https://github.com/ionictheme/ionic3-start-theme)
 
 ## Know Our paid themes
-==========
+
 * [ionBooking - Ionic 3 Hotel Booking Theme](https://ionictheme.com/ionbooking-ionic3-hotel-booking-theme)
 * [ionBooking Lite - Ionic 3 Hotel Booking Theme](https://ionictheme.com/ionbooking-lite-ionic3-hotel-booking-theme)
 * [ionProperty - Ionic 3 Real Estate Properties Theme](https://ionictheme.com/ionproperty-ionic3-realestate-properties-theme)
