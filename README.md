@@ -46,8 +46,6 @@ ___
 * [foodIonic - Ionic 3 Restaurant and Food Order Theme](https://ionictheme.com/foodionic-ionic3-restaurant-food-order-theme)
 * [tripIonic - Ionic 3 flights cruises trains booking theme](https://ionictheme.com/tripionic-ionic3-flights-cruises-trains-booking-theme)
 
-<br><br>
-
 ## Visit our official channels:
 
 **Website:**
