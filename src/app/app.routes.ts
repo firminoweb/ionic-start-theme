@@ -1,4 +1,4 @@
 export const AppRoutes = [
-  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' }
 ];
