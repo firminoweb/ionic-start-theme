@@ -13,8 +13,7 @@ import { CommonModule } from '@angular/common';
         path: '',
         component: MenuPage,
         children: [
-          { path: '', loadChildren: './pages/home/home.module#HomePageModule' },
-          // { path: 'user/:user', loadChildren: '../user-detail/user-detail.module#UserDetailPageModule' },
+          { path: '', loadChildren: '../home/home.module#HomePageModule' }
         ]
       }
     ])
