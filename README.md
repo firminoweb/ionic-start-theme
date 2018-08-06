@@ -45,6 +45,7 @@ ___
 * [ionProperty - Ionic 3 Real Estate Properties Theme](https://ionictheme.com/ionproperty-ionic3-realestate-properties-theme)
 * [foodIonic - Ionic 3 Restaurant and Food Order Theme](https://ionictheme.com/foodionic-ionic3-restaurant-food-order-theme)
 * [tripIonic - Ionic 3 flights cruises trains booking theme](https://ionictheme.com/tripionic-ionic3-flights-cruises-trains-booking-theme)
+* [fireIonic - Ionic 3 Firebase Starter Kit](https://ionictheme.com/fireionic-ionic3-firebase-starter-kit)
 
 ## Visit our official channels:
 
