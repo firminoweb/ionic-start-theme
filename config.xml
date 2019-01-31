@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ionicframework.ionic4startheme" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name short="Ionic4">Ionic 4 Start Theme</name>
+<widget id="com.ionictheme.ionic4start" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ionic 4 Start Theme</name>
     <description>Ionic 4 Start Theme</description>
-    <author email="firminoata@gmail.com" href="https://ionictheme.com">IonicTheme</author>
+    <author email="firminoata@gmail.com" href="https://ionictheme.com">Ionic Theme</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -18,7 +18,6 @@
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
@@ -76,25 +75,12 @@
         <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
-        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
-            <string>Acceso a la cámara</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
-            <string>Necesario para acceder a la biblioteca de fotos y obtener fotos desde allí</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
-            <string>Necesario para acceder y guardar las fotos en la biblioteca</string>
-        </edit-config>
     </platform>
     <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
+    <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
-    <plugin name="cordova-plugin-ionic-webview" spec="1.2.0" />
-    <plugin name="cordova-plugin-ionic-keyboard" spec="2.1.2" />
-    <plugin name="cordova-fabric-plugin" spec="1.1.14-dev">
-        <variable name="FABRIC_API_KEY" value="PUT_HERE_YOUR_FABRIC_API_KEY" />
-        <variable name="FABRIC_API_SECRET" value="PUT_HERE_YOUR_FABRIC_API_SECRET" />
-    </plugin>
-    <engine name="ios" spec="4.5.4" />
-    <engine name="android" spec="7.1.0" />
+    <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
+    <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

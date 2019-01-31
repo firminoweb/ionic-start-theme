@@ -1,32 +1,209 @@
 // http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
 
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
 
-// App Global Sass
-// ----------------------------------------------------------------------------
-// Put style rules here that you want to apply globally. These styles are for
-// the entire app and not just one component. Additionally, this file can be
-// also used as an entry point to import other Sass files to be included in the
-// output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's default Sass
-// variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule for the .md, .ios,
-// or .wp mode classes. The mode class is automatically applied to the <body>
-// element in the app.
-
-.content-fullscreen-message {
-  text-align: center;
-  padding: 30% 15%;
-  font-size: 26px;
-  font-weight: 300;
-  opacity: 0.2;
+ion-item {
+    --ion-item-background: transparent;
 }
 
-//// Background colors
-.dark-bg {
-  background-color: #110A3B;
-  .scroll {
-    background-color: #110A3B;
+// backgrounds //
+.bg-white {
+  background-color: #fff;
+}
+  
+  .bg-light {
+    background-color: var(--ion-color-light);
   }
+  
+  .bg-dark {
+      background-color: var(--ion-color-dark);
+  }
+  
+  .bg-primary {
+      background-color: var(--ion-color-primary);
+  }
+  
+  .bg-secondary {
+      background-color: var(--ion-color-secondary);
+  }
+  
+  .bg-tertiary {
+      background-color: var(--ion-color-tertiary);
+  }
+  
+  .bg-profile {
+    background-image: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary))
+  }
+  
+  .bg-main {
+      background-image: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
+  }
+  
+  // Helpers //
+  .w100 {
+    width: 100%;
+  }
+  
+  .bold,
+  .fw500 {
+      font-weight: 500 !important;
+  }
+  
+  .fw700 {
+      font-weight: 700 !important;
+  }
+  
+  .text08 {
+    font-size: .8rem;
+  }
+  
+  .text1 {
+    font-size: 1rem !important;
+  }
+
+  .text12 {
+    font-size: 1.2rem;
+  }
+
+  .text15 {
+    font-size: 1.5rem;
+  }
+  
+  .text20 {
+    font-size: 2rem;
+  }
+  
+  .text-white {
+      color: #fff;
+  }
+  
+  .text-primary {
+      color: var(--ion-color-primary);
+  }
+
+  .text-secondary {
+    color: var(--ion-color-secondary);
 }
+  
+  .text-dark {
+    color: var(--ion-color-dark);
+  }
+  
+  // menu //
+  // Menu user profile
+  ion-toolbar.user-profile {
+  
+    .user-avatar {
+      width: 68px;
+      height: 68px;
+    }
+    .item-inner {
+      border-width: 0;
+    }
+  }
+  
+  // Custom toolbar (overriding Shadow DOM)
+  ion-toolbar {
+    &.ion-color-primary {
+      --ion-color-base: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary)) !important;
+    }
+  }
+  
+  // Android card shadow
+  ion-card {
+    &.sc-ion-card-md-h {
+      box-shadow: 0 2px 4px rgba(var(--ion-color-dark-rgb),.24);
+    }
+  }
+  
+  // style for auth pages
+  .auth-page {
+    background-image: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+  
+    .grid {
+      padding: 0;
+      .col {
+        padding: 0;
+      }
+    }
+  
+    .btn-group {
+      .button-ios,
+      .button-md {
+        border-radius: 0;
+        &:first-of-type {
+          border-radius: 2px 0 0 2px;
+        }
+        &:last-of-type {
+          border-radius: 0 2px 2px 0;
+        }
+      }
+    }
+  
+    .auth-content {
+      margin: 0 5%;
+  
+      .logo {
+        width: 60px;
+        height: 60px;
+        margin: 20px auto 8px;
+        border-radius: 10%;
+        background: url("/assets/img/ionic4start-ico.png") no-repeat;
+        background-size: 100%;
+      }
+  
+      .list-form {
+        padding: 0;
+        margin-bottom: 0;
+  
+        ion-item {
+          background: none;
+          padding: 0;
+  
+          &:first-child {
+            border-top: none;
+          }
+  
+          &:after {
+            display: none;
+          }
+  
+          ion-label {
+            font-size: 1em;
+            color: var(--ion-color-light);
+          }
+  
+          input {
+            color: var(--ion-color-light);
+          }
+        }
+      }
+    }
+  
+  }
+  
+  // Custom Menu styles (overriding Shadow DOM)
+  ion-menu {
+    ion-header {
+      ion-toolbar {
+        &.ion-color-dark {
+          --ion-color-base: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary)) !important;
+        }
+      }
+    }
+  }
+  
+  .mto {
+    margin-top: 12px;
+    ion-icon {
+      margin-bottom: -2px;
+    }
+  }

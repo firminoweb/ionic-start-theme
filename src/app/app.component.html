@@ -1,3 +1,59 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar color="dark" class="user-profile">
+
+          <ion-item margin-bottom>
+            <ion-avatar slot="start" class="user-avatar">
+              <img src="assets/img/avatar.jpeg">
+            </ion-avatar>
+            <ion-label>
+              <ion-text color="medium">
+                <h1><strong>João Firmino</strong></h1>
+              </ion-text>
+              <ion-text color="secondary">
+                <h3>
+                  São Paulo, Brazil
+                </h3>
+              </ion-text>
+              <ion-menu-toggle class="mto" auto-hide="false">
+                <a class="text08" tappable (click)="goToEditProgile()">
+                  <ion-text color="medium">
+                    <ion-icon name="contact"></ion-icon>
+                    <strong>edit profile</strong>
+                  </ion-text>
+                </a> <ion-text color="secondary"> | </ion-text> 
+                <a class="text08" tappable (click)="logout()">
+                  <ion-text color="medium">
+                    <ion-icon name="log-out"></ion-icon>
+                    <strong>logout</strong>
+                  </ion-text>
+                </a>
+              </ion-menu-toggle>
+            </ion-label>
+          </ion-item>
+
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="bg-profile">
+        <ion-list>
+          <ion-list-header color="dark">
+            <ion-label>Menu</ion-label>
+          </ion-list-header>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerLink]="[p.url]" color="primary">
+              <ion-icon slot="start" [name]="p.icon" color="light"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
