@@ -10,12 +10,12 @@ Ionic 4 Start Theme (v1.0.0)
 * 2 Page modals
 * 2 Components
 
-![Ionic 4 Start Theme Preview 01](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview01.png "Ionic 4 Start Theme")
-![Ionic 4 Start Theme Preview 02](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview02.png "Ionic 4 Start Theme")
-![Ionic 4 Start Theme Preview 03](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview03.png "Ionic 4 Start Theme")
-![Ionic 4 Start Theme Preview 04](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview04.png "Ionic 4 Start Theme")
-![Ionic 4 Start Theme Preview 05](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview05.png "Ionic 4 Start Theme")
-![Ionic 4 Start Theme Preview 06](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview06.png "Ionic 4 Start Theme")
+![Ionic 4 Start Theme Preview 01](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview01.png | width=120)
+![Ionic 4 Start Theme Preview 02](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview02.png | width=120)
+![Ionic 4 Start Theme Preview 03](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview03.png | width=120)
+![Ionic 4 Start Theme Preview 04](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview04.png | width=120)
+![Ionic 4 Start Theme Preview 05](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview05.png | width=120)
+![Ionic 4 Start Theme Preview 06](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview06.png | width=120)
 
 Requirements
 ------------
@@ -32,7 +32,7 @@ $ npm install
 $ ionic serve -l
 ```
 
-More about here: [Ionic 4 Start Theme (Github)](https://ionictheme.com/ionic4-start-theme-free)
+More about here: [Ionic 4 Start Theme (ionictheme.com)](https://ionictheme.com/ionic4-start-theme-free)
 
 ___
 
