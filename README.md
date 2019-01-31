@@ -1,36 +1,33 @@
 Ionic 4 Start Theme
 ==========
-Ionic 4 start theme experiencing the best of new features about Angular 6 and Ionic 4. 
+**Ionic 4 start theme** experiencing the best of new features about this new and definitive release: Angular 7 + Ionic 4 final. 
 
-* Angular6
-* @ionic/angular 4.0.0-alpha.10
-* Ionic Native 5 Beta
-* Ionic CLI 4.0.0 RC
-* Capacitor experiments
+* Angular 7
+* @ionic/angular 4.0.0
+* Ionic Native 5
+* Ionic 4 Components/API Samples
+* 6 Page Samples (8 with modals)
+* 2 Page modals
+* 2 Components
 
+![Ionic 4 Start Theme Preview 01](src/assets/image/Ionic4_Start_Theme-preview01.png?raw=true "Ionic 4 Start Theme")
 
 Requirements
 ------------
 
-* Node 10+
+* Node 8.13+
 * Npm 6+
-* Ionic 4+
-* Ionic Lab 1+
+* Ionic CLI 4.5
 
-```
-$ brew update && brew upgrade
-$ brew install node
-$ npm install -g npm@latest
-$ npm install -g ionic@rc
-$ npm install -g @ionic/lab@rc semver
-```
-
-Created with Ionic CLI version 4.0.0 RC.9:
+Installing
+------------
 
 ```
 $ npm install
 $ ionic serve -l
 ```
+
+More about here: [Ionic 4 Start Theme (Github)](https://ionictheme.com/ionic4-start-theme-free)
 
 ___
 
