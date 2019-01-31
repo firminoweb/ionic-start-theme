@@ -10,12 +10,7 @@ Ionic 4 Start Theme (v1.0.0)
 * 2 Page modals
 * 2 Components
 
-![Ionic 4 Start Theme Preview 01](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview01.png =120x)
-![Ionic 4 Start Theme Preview 02](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview02.png =120x)
-![Ionic 4 Start Theme Preview 03](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview03.png =120x)
-![Ionic 4 Start Theme Preview 04](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview04.png =120x)
-![Ionic 4 Start Theme Preview 05](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview05.png =120x)
-![Ionic 4 Start Theme Preview 06](https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview06.png =120x)
+<img src="https://github.com/ionictheme/ionic4-start-theme/blob/master/src/assets/img/Ionic4_Start_Theme-preview01.png" width="120">
 
 Requirements
 ------------
