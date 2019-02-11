@@ -41,6 +41,7 @@ ___
 
 ## Know Our paid themes
 
+* [foodIonic 2 - Ionic 4 Restaurant and Food Order Theme](https://ionictheme.com/foodionic2-ionic4-restaurant-food-order-theme)
 * [ionBooking 2 - Ionic 4 Hotel Booking Theme](https://ionictheme.com/ionbooking2-ionic4-hotel-booking-theme)
 * [ionBooking - Ionic 3 Hotel Booking Theme](https://ionictheme.com/ionbooking-ionic3-hotel-booking-theme)
 * [ionBooking Lite - Ionic 3 Hotel Booking Theme](https://ionictheme.com/ionbooking-lite-ionic3-hotel-booking-theme)
