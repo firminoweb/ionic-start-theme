@@ -1,209 +1,126 @@
-// http://ionicframework.com/docs/theming/
-@import '~@ionic/angular/css/core.css';
-@import '~@ionic/angular/css/normalize.css';
-@import '~@ionic/angular/css/structure.css';
-@import '~@ionic/angular/css/typography.css';
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
 
-@import '~@ionic/angular/css/padding.css';
-@import '~@ionic/angular/css/float-elements.css';
-@import '~@ionic/angular/css/text-alignment.css';
-@import '~@ionic/angular/css/text-transformation.css';
-@import '~@ionic/angular/css/flex-utils.css';
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
 
-ion-item {
-    --ion-item-background: transparent;
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* Swiper bundle */
+@import 'swiper/css/bundle';
+
+/* Animation */
+@import "~animate.css/animate.min.css";
+
+
+body {
+  background-color: var(--ion-color-dark);
 }
 
-// backgrounds //
-.bg-white {
-  background-color: #fff;
+ion-content {
+  --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
 }
-  
-  .bg-light {
-    background-color: var(--ion-color-light);
-  }
-  
-  .bg-dark {
-      background-color: var(--ion-color-dark);
-  }
-  
-  .bg-primary {
-      background-color: var(--ion-color-primary);
-  }
-  
-  .bg-secondary {
-      background-color: var(--ion-color-secondary);
-  }
-  
-  .bg-tertiary {
-      background-color: var(--ion-color-tertiary);
-  }
-  
-  .bg-profile {
-    background-image: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary))
-  }
-  
-  .bg-main {
-      background-image: linear-gradient(-135deg, var(--ion-color-medium), var(--ion-color-light))
-  }
-  
-  // Helpers //
-  .w100 {
-    width: 100%;
-  }
-  
-  .bold,
-  .fw500 {
-      font-weight: 500 !important;
-  }
-  
-  .fw700 {
-      font-weight: 700 !important;
-  }
-  
-  .text08 {
-    font-size: .8rem;
-  }
-  
-  .text1 {
-    font-size: 1rem !important;
-  }
 
-  .text12 {
-    font-size: 1.2rem;
-  }
+ion-list {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: var(--ion-color-primary);
+}
 
-  .text15 {
-    font-size: 1.5rem;
-  }
-  
-  .text20 {
-    font-size: 2rem;
-  }
-  
-  .text-white {
+ion-label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+// Action Sheet styles
+ion-action-sheet {
+  &.custom-action-sheet {
+    ion-backdrop {
+      background-color: #000;
+      opacity: 0.6;
+    }
+
+    .action-sheet-group {
+      background: var(--ion-color-dark);
+    }
+
+    .action-sheet-title {
+      color: var(--ion-color-tertiary);
+      font-weight: 700;
+    }
+
+    .action-sheet-button,
+    .action-sheet-button.ion-focused {
       color: #fff;
-  }
-  
-  .text-primary {
-      color: var(--ion-color-primary);
-  }
 
-  .text-secondary {
-    color: var(--ion-color-secondary);
+      &:hover {
+        color: var(--ion-color-tertiary);
+      }
+    }
+
+    .action-sheet-icon {
+      color: var(--ion-color-tertiary);
+    }
+  }
 }
-  
-  .text-dark {
-    color: var(--ion-color-dark);
+
+/* Searchbar */
+ion-searchbar.sc-ion-searchbar-ios-h {
+  --cancel-button-color: var(--ion-color-medium);
+  --background: var(--ion-color-dark-tint);
+  --border-radius: 8px;
+}
+
+@media (any-hover: hover) {
+  ion-action-sheet.custom-action-sheet.action-sheet-button:hover {
+    color: var(--ion-color-tertiary);
   }
-  
-  // menu //
-  // Menu user profile
-  ion-toolbar.user-profile {
-  
-    .user-avatar {
-      width: 68px;
-      height: 68px;
-    }
-    .item-inner {
-      border-width: 0;
-    }
-  }
-  
-  // Custom toolbar (overriding Shadow DOM)
-  ion-toolbar {
-    &.ion-color-primary {
-      --ion-color-base: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary)) !important;
-    }
-  }
-  
-  // Android card shadow
-  ion-card {
-    &.sc-ion-card-md-h {
-      box-shadow: 0 2px 4px rgba(var(--ion-color-dark-rgb),.24);
-    }
-  }
-  
-  // style for auth pages
-  .auth-page {
-    background-image: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
-  
-    .grid {
-      padding: 0;
-      .col {
-        padding: 0;
-      }
-    }
-  
-    .btn-group {
-      .button-ios,
-      .button-md {
-        border-radius: 0;
-        &:first-of-type {
-          border-radius: 2px 0 0 2px;
-        }
-        &:last-of-type {
-          border-radius: 0 2px 2px 0;
-        }
-      }
-    }
-  
-    .auth-content {
-      margin: 0 5%;
-  
-      .logo {
-        width: 60px;
-        height: 60px;
-        margin: 20px auto 8px;
-        border-radius: 10%;
-        background: url("/assets/img/ionic4start-ico.png") no-repeat;
-        background-size: 100%;
-      }
-  
-      .list-form {
-        padding: 0;
-        margin-bottom: 0;
-  
-        ion-item {
-          background: none;
-          padding: 0;
-  
-          &:first-child {
-            border-top: none;
-          }
-  
-          &:after {
-            display: none;
-          }
-  
-          ion-label {
-            font-size: 1em;
-            color: var(--ion-color-light);
-          }
-  
-          input {
-            color: var(--ion-color-light);
-          }
-        }
-      }
-    }
-  
-  }
-  
-  // Custom Menu styles (overriding Shadow DOM)
-  ion-menu {
-    ion-header {
-      ion-toolbar {
-        &.ion-color-dark {
-          --ion-color-base: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary)) !important;
-        }
-      }
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+
+  ion-avatar {
+    text-align: center;
+    margin-bottom: 3px;
+
+    .avatar-icon-placeholder {
+      font-size: 128px;
     }
   }
-  
-  .mto {
-    margin-top: 12px;
-    ion-icon {
-      margin-bottom: -2px;
-    }
+}
+
+// HR
+hr {
+  background: var(--ion-color-primary);
+  margin: 22px 0;
+
+  &.hr-medium {
+    margin: 32px 0;
   }
+}

@@ -1,0 +1,72 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary" text="Settings" defaultHref="/settings">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="light">
+      Backups
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Backups (3)</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" detail="false">
+        <ion-label>
+          <h3>01 Jan, 2023</h3>
+          <p class="font-size-smallest">10:00 AM &middot; 6.98 MB</p>
+        </ion-label>
+        <ion-button slot="end" color="secondary">
+          Restore
+        </ion-button>
+      </ion-item>
+
+      <ion-item color="primary" detail="false">
+        <ion-label>
+          <h3>01 Dec, 2022</h3>
+          <p class="font-size-smallest">10:00 AM &middot; 6.40 MB</p>
+        </ion-label>
+        <ion-button slot="end" color="secondary">
+          Restore
+        </ion-button>
+      </ion-item>
+
+      <ion-item color="primary" detail="false">
+        <ion-label>
+          <h3>01 Nov, 2022</h3>
+          <p class="font-size-smallest">10:00 AM &middot; 5.15 MB</p>
+        </ion-label>
+        <ion-button slot="end" color="secondary">
+          Restore
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <p class="list-description">
+      <ion-text color="medium">After restoring a backup you have to login again.</ion-text>
+    </p>
+
+    <hr class="hr-medium">
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" button detail=false>
+        <ion-icon slot="start" color="tertiary" name="cloud-upload"></ion-icon>
+        <ion-label color="tertiary">
+          <h3>Create backup now</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

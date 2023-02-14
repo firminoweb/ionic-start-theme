@@ -1,0 +1,90 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary" text="Payments" defaultHref="/payments"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Information</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary">
+        <ion-label>
+          <p>Amount</p>
+        </ion-label>
+        <ion-badge color="danger" mode="ios" slot="end">- $8.60</ion-badge>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-label>
+          <p>Status</p>
+        </ion-label>
+        <ion-input readonly slot="end" class="font-size-small ion-text-right ion-no-padding-end" value="Completed"></ion-input>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-label>
+          <p>Date</p>
+        </ion-label>
+        <ion-input readonly slot="end" class="font-size-small ion-text-right ion-no-padding-end" value="01 June, 2022 / 09:21"></ion-input>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-label>
+          <p>Merchant</p>
+        </ion-label>
+        <ion-input readonly slot="end" class="font-size-small ion-text-right ion-no-padding-end" value="Starbucks New York"></ion-input>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-label>
+          <p>Transaction-ID</p>
+        </ion-label>
+        <ion-input readonly slot="end" class="font-size-small ion-text-right ion-no-padding-end" value="848-14E-11V"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <hr class="hr-medium">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Actions</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" detail="false">
+        <ion-avatar slot="start" class="ion-avatar-default-icon">
+          <ion-icon color="tertiary" name="receipt"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+          <h3>Receipt</h3>
+          <p class="font-size-smallest">View digital invoice</p>
+        </ion-label>
+        <ion-button color="secondary" slot="end">
+          View
+        </ion-button>
+      </ion-item>
+
+      <ion-item color="primary" button>
+        <ion-avatar slot="start" class="ion-avatar-default-icon">
+          <ion-icon color="tertiary" name="chatbox"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+          <h3>Contact merchant</h3>
+          <p class="font-size-smallest">Get in touch with merchant</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

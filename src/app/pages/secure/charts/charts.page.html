@@ -1,0 +1,134 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title color="light">
+      Charts
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary" routerLink="/settings">
+        <ion-icon slot="icon-only" name="cog"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Insights</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <ion-card color="primary" class="ion-no-margin ion-card-chart animate__animated animate__fadeIn">
+      <!-- Skeletons -->
+      <ng-container *ngIf="!content_loaded">
+        <ion-card-header>
+          <div>
+            <ion-card-title>
+              <ion-skeleton-text animated style="width: 60px"></ion-skeleton-text>
+            </ion-card-title>
+            <ion-card-subtitle>
+              <ion-skeleton-text animated style="width: 80px"></ion-skeleton-text>
+            </ion-card-subtitle>
+          </div>
+          <ion-badge color="primary" mode="ios">
+            <ion-skeleton-text animated style="width: 50px"></ion-skeleton-text>
+          </ion-badge>
+        </ion-card-header>
+
+        <ion-skeleton-text animated style="width: calc(100% - 40px); margin: 16px auto 16px auto; min-height: 140px;">
+        </ion-skeleton-text>
+      </ng-container>
+
+      <!-- Chart -->
+      <ng-container *ngIf="content_loaded">
+        <ion-card-header>
+          <div>
+            <ion-card-title>$481.00</ion-card-title>
+            <ion-card-subtitle class="ion-margin-bottom">
+              <ion-text color="tertiary">Spent in total this year</ion-text>
+            </ion-card-subtitle>
+          </div>
+          <ion-badge color="secondary">
+            <ion-icon name="caret-up"></ion-icon>21.16%
+          </ion-badge>
+        </ion-card-header>
+
+        <canvas baseChart [data]="bar_chart_data" [options]="bar_chart_option" [type]="bar_chart_type"
+          class="ion-padding">
+        </canvas>
+      </ng-container>
+    </ion-card>
+
+    <hr class="hr-medium">
+
+    <ion-card color="primary" class="ion-no-margin ion-card-chart animate__animated animate__fadeIn">
+      <!-- Skeletons -->
+      <ng-container *ngIf="!content_loaded">
+        <ion-card-header>
+          <div>
+            <ion-card-title>
+              <ion-skeleton-text animated style="width: 60px"></ion-skeleton-text>
+            </ion-card-title>
+            <ion-card-subtitle>
+              <ion-skeleton-text animated style="width: 80px"></ion-skeleton-text>
+            </ion-card-subtitle>
+          </div>
+          <ion-badge color="primary" mode="ios">
+            <ion-skeleton-text animated style="width: 50px"></ion-skeleton-text>
+          </ion-badge>
+        </ion-card-header>
+
+        <ion-skeleton-text animated style="width: calc(100% - 40px); margin: 16px auto 16px auto; min-height: 140px;">
+        </ion-skeleton-text>
+      </ng-container>
+
+      <!-- Chart -->
+      <ng-container *ngIf="content_loaded">
+        <canvas
+          class="ion-padding"
+          baseChart
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [type]="barChartType"
+        >
+        </canvas>
+      </ng-container>
+    </ion-card>
+
+    <hr class="hr-medium">
+
+    <ion-card color="primary" class="ion-no-margin ion-card-chart animate__animated animate__fadeIn">
+      <!-- Skeletons -->
+      <ng-container *ngIf="!content_loaded">
+        <ion-card-header>
+          <div>
+            <ion-card-title>
+              <ion-skeleton-text animated style="width: 60px"></ion-skeleton-text>
+            </ion-card-title>
+            <ion-card-subtitle>
+              <ion-skeleton-text animated style="width: 80px"></ion-skeleton-text>
+            </ion-card-subtitle>
+          </div>
+          <ion-badge color="primary" mode="ios">
+            <ion-skeleton-text animated style="width: 50px"></ion-skeleton-text>
+          </ion-badge>
+        </ion-card-header>
+
+        <ion-skeleton-text animated style="width: calc(100% - 40px); margin: 16px auto 16px auto; min-height: 140px;">
+        </ion-skeleton-text>
+      </ng-container>
+
+      <!-- Chart -->
+      <ng-container *ngIf="content_loaded">
+        <canvas baseChart class="chart"
+        [data]="polarAreaChartData"
+        [legend]="polarAreaLegend"
+        [type]="polarAreaChartType">
+        </canvas>
+      </ng-container>
+    </ion-card>
+
+  </div>
+
+</ion-content>

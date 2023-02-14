@@ -1,0 +1,38 @@
+:host {
+  ion-item {
+    --border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .form-default {
+    margin-top: 20px;
+  }
+}
+
+.profile-card {
+  border-radius: 0;
+  background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+
+  ion-avatar {
+    width: 128px;
+    height: 128px;
+    text-align: center;
+    margin: 0 auto 30px;
+
+    img {
+      height: 128px;
+      width: 128px;
+      border-radius: 50%;
+      border: 4px solid var(--ion-color-light);
+      display: inline;
+      box-shadow: 0 0 28px hsl(0deg 0% 100% / 65%);
+    }
+  }
+}

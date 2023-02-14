@@ -1,0 +1,27 @@
+:host {
+  body {
+    background-color: var(--ion-color-dark);
+  }
+
+  ion-content {
+      --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+  }
+
+  ion-item {
+    --border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .logo-container {
+    text-align: center;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+    }
+
+    p {
+      margin-bottom: 42px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title color="light">
+      Style Guide
+    </ion-title>
+
+    <ion-buttons slot="primary">
+      <ion-button color="secondary" routerLink="/settings">
+        <ion-icon slot="icon-only" name="cog"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <h2>
+      <ion-text color="tertiary">Sample Components</ion-text>
+    </h2>
+
+    <hr class="hr-medium">
+
+    <ion-card color="primary">
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="primary">
+      <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="primary">
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item color="primary">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
+            </ion-thumbnail>
+            <ion-label>Item</ion-label>
+          </ion-item>
+
+          <ion-item color="primary">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
+            </ion-thumbnail>
+            <ion-label>Item</ion-label>
+          </ion-item>
+
+          <ion-item color="primary">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
+            </ion-thumbnail>
+            <ion-label>Item</ion-label>
+          </ion-item>
+
+          <ion-item color="primary" lines="none">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
+            </ion-thumbnail>
+            <ion-label>Item</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list class="item-card-list animate__animated animate__fadeIn ion-margin" lines="none">
+      <ion-item color="primary" button detail>
+        <ion-label color="medium">
+          <h3>$12,123.99</h3>
+          <p>Deutsche Bank AG</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="primary" button detail>
+        <ion-label color="medium">
+          <h3>$255,000</h3>
+          <p>Bitcoin</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="primary" button detail>
+        <ion-label color="medium">
+          <h3>$1,500.00</h3>
+          <p>PayPal</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="list-custom animate__animated animate__fadeIn ion-margin" lines="full">
+      <ion-item color="primary" button detail="false">
+        <ion-avatar slot="start" class="ion-avatar-default-icon">
+          <ion-icon color="tertiary" size="large" name="cafe-outline"></ion-icon>
+        </ion-avatar>
+
+        <ion-label>
+          <h3>Coffee</h3>
+          <p>Lorem Ipsum &middot; 09.04.2023</p>
+        </ion-label>
+        <ion-badge color="danger" slot="end">- $7.50</ion-badge>
+      </ion-item>
+
+      <ion-item color="primary" button detail="false">
+        <ion-avatar slot="start" class="ion-avatar-default-icon">
+          <ion-icon color="tertiary" size="large" name="cash-outline"></ion-icon>
+        </ion-avatar>
+
+        <ion-label>
+          <h3>Salary</h3>
+          <p>Lorem Ipsum Inc. &middot; 06.03.2023</p>
+        </ion-label>
+        <ion-badge color="secondary" slot="end">$7500</ion-badge>
+      </ion-item>
+
+      <ion-item color="primary" button detail="false">
+        <ion-avatar slot="start" class="ion-avatar-default-icon">
+          <ion-icon color="tertiary" size="large" name="home-outline"></ion-icon>
+        </ion-avatar>
+
+        <ion-label>
+          <h3>Rent</h3>
+          <p>Lorem Inc. &middot; 03.02.2023</p>
+        </ion-label>
+        <ion-badge color="danger" mode="ios" slot="end">- $1800.00</ion-badge>
+      </ion-item>
+    </ion-list>
+
+    <hr class="hr-medium">
+
+  </div>
+</ion-content>

@@ -1,0 +1,81 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary" text="Settings" defaultHref="/settings">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="light">
+      Account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Privacy</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" detail="false">
+        <ion-icon slot="start" color="medium" name="notifications"></ion-icon>
+        <ion-label>
+          <h3>Notifications</h3>
+        </ion-label>
+        <ion-toggle color="tertiary" checked slot="end"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <p>
+      <ion-text color="medium">We never display sensible data in your notifications.</ion-text>
+    </p>
+
+    <hr class="hr-medium">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Feedback & Reports</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" detail="false">
+        <ion-icon slot="start" color="medium" name="bug"></ion-icon>
+        <ion-label>
+          <h3>Share crash reports</h3>
+        </ion-label>
+        <ion-toggle color="tertiary" slot="end"></ion-toggle>
+      </ion-item>
+
+      <ion-item color="primary" detail="false">
+        <ion-icon slot="start" color="medium" name="document"></ion-icon>
+        <ion-label>
+          <h3>Protocols</h3>
+        </ion-label>
+        <ion-toggle color="tertiary" slot="end"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <p>
+      <ion-text color="medium">Activate this function to auto share crash reports with us. Important: no personal or financial data is shared.</ion-text>
+    </p>
+
+    <hr class="hr-medium">
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" button detail=false>
+        <ion-icon slot="start" color="tertiary" name="close"></ion-icon>
+        <ion-label color="tertiary">
+          <h3>Delete account</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

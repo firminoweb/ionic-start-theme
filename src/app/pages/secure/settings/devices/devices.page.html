@@ -1,0 +1,63 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary" text="Settings" defaultHref="/settings">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="light">
+      Devices
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Registered devices (3)</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" detail="false">
+        <ion-icon slot="start" color="medium" name="phone-portrait"></ion-icon>
+        <ion-label>
+          <h3>John's iPhone</h3>
+          <p class="font-size-smallest">Registered: 01 Jan, 2023</p>
+        </ion-label>
+        <ion-badge color="secondary" mode="ios" slot="end">Main device</ion-badge>
+      </ion-item>
+
+      <ion-item color="primary" detail="false">
+        <ion-icon slot="start" color="medium" name="laptop"></ion-icon>
+        <ion-label>
+          <h3>John's MacBook Pro</h3>
+          <p class="font-size-smallest">Registered: 04 Feb, 2023</p>
+        </ion-label>
+        <ion-button slot="end" color="danger">
+          Remove
+        </ion-button>
+      </ion-item>
+
+      <ion-item color="primary" detail="false">
+        <ion-icon slot="start" color="medium" name="tablet-portrait"></ion-icon>
+        <ion-label>
+          <h3>John's iPad</h3>
+          <p class="font-size-smallest">Registered: 11 Feb, 2023</p>
+        </ion-label>
+        <ion-button slot="end" color="danger">
+          Remove
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <p>
+      <ion-text color="medium">To remove your current main device, you have to set another one as your main device.</ion-text>
+    </p>
+
+  </div>
+
+</ion-content>

@@ -1,8 +1,7 @@
 {
-  "name": "ionic4Start",
+  "name": "Ionic Start Theme",
   "integrations": {
-    "cordova": {}
+    "capacitor": {}
   },
-  "type": "angular",
-  "id": "3fff720e"
+  "type": "angular"
 }

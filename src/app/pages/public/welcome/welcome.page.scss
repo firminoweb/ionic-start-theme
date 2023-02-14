@@ -1,0 +1,68 @@
+/* Swiper bundle */
+@import 'swiper/css/bundle';
+
+app-welcome {
+  background-color: var(--ion-color-dark);
+}
+
+app-welcome ion-content {
+  --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+}
+
+app-welcome .swiper-welcome {
+  text-align: center;
+}
+
+app-welcome .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+app-welcome .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+app-welcome h3 {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 800;
+  margin: 40px 0 12px 0;
+}
+
+app-welcome p {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--ion-color-tertiary);
+}
+
+app-welcome swiper img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+app-welcome swiper ion-icon {
+  color: var(--ion-color-light-shade);
+  font-size: 82px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  border: 4px solid hsl(215deg 20% 58% / 25%);
+  background-color: var(--ion-color-primary)
+}
+
+app-welcome .swiper-pagination-bullet {
+  background: var(--ion-color-light);
+}
+
+app-welcome .swiper-pagination-bullet-active {
+  background: var(--ion-color-light);
+}
+
+app-welcome ion-footer {
+  background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+}

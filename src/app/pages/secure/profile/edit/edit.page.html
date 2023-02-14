@@ -1,0 +1,66 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary" text="Settings" defaultHref="/settings">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="light">
+      Profile
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <form [formGroup]="edit_profile_form" (ngSubmit)="submit()">
+        <ion-button color="secondary" type="submit">
+          Done
+        </ion-button>
+      </form>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="ion-no-margin profile-card">
+    <ion-card-content>
+      <ion-avatar>
+        <img src="../../../../assets/card-media.png">
+      </ion-avatar>
+
+      <h1>
+        <ion-text color="tertiary"><strong>John Doe</strong></ion-text>
+      </h1>
+
+      <p>
+        <ion-text color="medium">john.doe@mail.com</ion-text>
+      </p>
+
+      <ion-button class="ion-button-small" color="primary" (click)="updateProfilePicture()">
+        Update profile picture
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+  <div class="ion-padding">
+    <form class="form-default" [formGroup]="edit_profile_form" (submit)="submit()">
+
+      <ion-item color="dark" class="animate__animated animate__fadeInUp">
+        <ion-label position="floating">
+          First name
+        </ion-label>
+        <ion-input color="secondary" formControlName="name_first" placeholder="First name"></ion-input>
+      </ion-item>
+
+      <ion-item color="dark" class="animate__animated animate__fadeInUp">
+        <ion-label position="floating">
+          Last name
+        </ion-label>
+        <ion-input color="secondary" formControlName="name_last" placeholder="Last name"></ion-input>
+      </ion-item>
+
+    </form>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-content>
+  <swiper class="swiper-welcome" #swiper [config]="config" (slideChange)="swiperSlideChanged($event)"
+    (reachEnd)="onLastSlide()">
+    <ng-template swiperSlide>
+      <ion-icon name="logo-ionic" class="animate__animated animate__fadeInDown"></ion-icon>
+
+      <h3 class="animate__animated animate__fadeInUp">
+        <ion-text color="light">Ionic Start Theme</ion-text>
+      </h3>
+      <p class="animate__animated animate__fadeInUp">
+        <ion-text color="medium">Latest Ionic version starter theme. Experiencing the best of new features to start your project.</ion-text>
+      </p>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <ion-icon name="logo-capacitor" class="animate__animated animate__fadeInDown"></ion-icon>
+
+      <h3 class="animate__animated animate__fadeInUp">
+        <ion-text color="light">Capacitor Ready</ion-text>
+      </h3>
+      <p class="animate__animated animate__fadeInUp">
+        <ion-text color="medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio mollitia sed sint quod, repellendus illum ex, doloribus, quis ipsam officiis hic saepe commodi? Ab porro laboriosam totam iure et.</ion-text>
+      </p>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <ion-icon name="stats-chart" class="animate__animated animate__fadeInDown"></ion-icon>
+
+      <h3 class="animate__animated animate__fadeInUp">
+        <ion-text color="light">Components Sample</ion-text>
+      </h3>
+      <p class="animate__animated animate__fadeInUp">
+        <ion-text color="medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio mollitia sed sint quod, repellendus illum ex, doloribus, quis ipsam officiis hic saepe commodi? Ab porro laboriosam totam iure et.</ion-text>
+      </p>
+    </ng-template>
+  </swiper>
+</ion-content>
+
+<ion-footer class="ion-padding-bottom-large animate__animated animate__fadeInUp">
+  <ion-button class="ion-margin" expand="block" size="large" color="secondary" (click)="nextSlide()" *ngIf="!last_slide">
+    Next
+    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+  </ion-button>
+  <ion-button class="ion-margin" expand="block" size="large" color="secondary" (click)="getStarted()" *ngIf="last_slide">
+    Get started
+  </ion-button>
+</ion-footer>

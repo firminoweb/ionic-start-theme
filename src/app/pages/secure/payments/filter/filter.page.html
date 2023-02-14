@@ -1,0 +1,110 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button color="secondary" fill="outline" (click)="cancel()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title color="light">
+      Filter
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="primary" fill="solid" (click)="apply()">
+        Apply
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Data</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary">
+        <ion-label>
+          <p>Categories</p>
+        </ion-label>
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" value="all" placeholder="All">
+          <ion-select-option value="all">All</ion-select-option>
+          <ion-select-option value="uncategorized">Uncategorized</ion-select-option>
+          <ion-select-option value="salary">Salary</ion-select-option>
+          <ion-select-option value="rent">Rent</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item color="primary">
+        <ion-label>
+          <p>Contracts</p>
+        </ion-label>
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" value="all" placeholder="All">
+          <ion-select-option value="all">All</ion-select-option>
+          <ion-select-option value="contracts-only">Contracts only</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <hr class="hr-medium">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Timescale</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary">
+        <ion-label>
+          <p>From</p>
+        </ion-label>
+        <ion-input readonly slot="end" type="text" placeholder="Date from" class="ion-text-right ion-no-padding-end"
+          (click)="toggleDateFrom()" [(ngModel)]="date_from"></ion-input>
+      </ion-item>
+
+      <ion-datetime class="animate__animated animate__fadeIn" *ngIf="date_from_active" color="primary" locale="en-EN"
+        size="cover" showDefaultButtons="false" presentation="date" (ionChange)="onDateFromSelect($event)">
+      </ion-datetime>
+
+      <ion-item color="primary">
+        <ion-label>
+          <p>To</p>
+        </ion-label>
+        <ion-input readonly slot="end" type="text" placeholder="Date to" class="ion-text-right ion-no-padding-end"
+          (click)="toggleDateTo()" [(ngModel)]="date_to"></ion-input>
+      </ion-item>
+
+      <ion-datetime class="animate__animated animate__fadeIn" *ngIf="date_to_active" color="primary" locale="en-EN"
+        size="cover" showDefaultButtons="false" presentation="date" (ionChange)="onDateToSelect($event)">
+      </ion-datetime>
+    </ion-list>
+
+    <hr class="hr-medium">
+
+    <ion-list-header class="ion-list-header-small">
+      <ion-label>
+        <ion-text color="tertiary">Amount</ion-text>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-list class="list-custom" lines="full">
+      <ion-item color="primary" lines="none" class="item-range">
+        <ion-range id="dual-range" color="secondary" dualKnobs="true" min="0" max="1000" step="10" (ionChange)="rangeChanged($event)"></ion-range>
+      </ion-item>
+
+      <ion-item color="secondary" class="range-values">
+        <div slot="start">${{range_value_lower}}</div>
+        <div slot="end">${{range_value_upper}}</div>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+	"appId": "com.ionic.starttheme",
+	"appName": "Ionic Start Theme",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"ios": { "scheme": "Ionic Start Theme" }
+}

@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary" text="Sign in" defaultHref="/signin"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding ion-full-height ion-flex ion-flex-center">
+
+    <div class="logo-container">
+      <h1 class="animate__animated animate__fadeInUp">
+        <ion-text color="light">Sign Up</ion-text>
+      </h1>
+      <p class="animate__animated animate__fadeInUp">
+        <ion-text color="secondary">Create a free account.</ion-text>
+      </p>
+    </div>
+
+
+    <form class="form-default" [formGroup]="signup_form" (submit)="signUp()">
+      <ion-item color="dark" class="animate__animated animate__fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="mail" item-start></ion-icon>
+          Email
+        </ion-label>
+        <ion-input color="secondary" type="email" autocomplete="off" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item color="dark" class="animate__animated animate__fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input color="secondary" formControlName="password" type="password" placeholder="Your password"></ion-input>
+      </ion-item>
+
+      <ion-item color="dark" class="animate__animated animate__fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          Password repeat
+        </ion-label>
+        <ion-input color="secondary" formControlName="password_repeat" type="password" placeholder="Password repeat"></ion-input>
+      </ion-item>
+
+      <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="secondary">
+        Sign up free
+      </ion-button>
+    </form>
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-text color="medium">
+        <small>&copy;{{current_year}} Firmino.dev</small>
+      </ion-text>
+    </div>
+
+  </div>
+
+</ion-content>

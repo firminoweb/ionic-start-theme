@@ -1,63 +1,44 @@
 import { Component } from '@angular/core';
-
-import { Platform, NavController } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-
-import { Pages } from './interfaces/pages';
+import { SplashScreen } from '@capacitor/splash-screen';
+import { StatusBar, Style } from '@capacitor/status-bar';
+import { Capacitor } from '@capacitor/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
 
-  public appPages: Array<Pages>;
-
   constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
-    public navCtrl: NavController
+    private platform: Platform
   ) {
-    this.appPages = [
-      {
-        title: 'Home',
-        url: '/home-results',
-        direct: 'root',
-        icon: 'home'
-      },
-      {
-        title: 'About',
-        url: '/about',
-        direct: 'forward',
-        icon: 'information-circle-outline'
-      },
-
-      {
-        title: 'App Settings',
-        url: '/settings',
-        direct: 'forward',
-        icon: 'cog'
-      }
-    ];
-
     this.initializeApp();
   }
 
+  // Initialize app
   initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    }).catch(() => {});
-  }
 
-  goToEditProgile() {
-    this.navCtrl.navigateForward('edit-profile');
-  }
+    // Wait until platform is ready
+    this.platform.ready().then(async () => {
 
-  logout() {
-    this.navCtrl.navigateRoot('/');
+      // If we're on a mobile platform (iOS / Android), not web
+      if (Capacitor.getPlatform() !== 'web') {
+
+        // Set StatusBar style (dark / light)
+        // await StatusBar.setStyle({ style: Style.Dark });
+      }
+
+      // ...
+      // do some more config and setup if necessary
+      // ...
+
+      // Fake timeout since we do not load any data
+      setTimeout(async () => {
+        // Hide SplashScreen
+        await SplashScreen.hide();
+      }, 2000);
+    });
   }
 }

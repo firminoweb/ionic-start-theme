@@ -1,0 +1,37 @@
+<ion-tabs>
+
+  <ion-tab-bar color="primary" slot="bottom">
+
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="charts">
+      <ion-icon name="pie-chart"></ion-icon>
+      <ion-label>Charts</ion-label>
+    </ion-tab-button>
+
+    <!-- Placeholder for fab button -->
+    <ion-tab-button class="ion-tab-button-placeholder">
+    </ion-tab-button>
+
+    <ion-tab-button tab="payments">
+      <ion-icon name="swap-horizontal"></ion-icon>
+      <ion-label>Payments</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="styleguide">
+      <ion-icon name="color-palette-outline"></ion-icon>
+      <ion-label>Style</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+  <ion-fab class="ion-fab-custom" vertical="bottom" horizontal="center" slot="fixed" (click)="selectAction()">
+    <ion-fab-button color="dark">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-tabs>
