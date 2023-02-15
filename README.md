@@ -33,10 +33,11 @@ See more here [Ionic Docs](https://ionicframework.com/docs)
 
 ---
 
-## Installing
+## Installing / Serve / Prod
 ```
 $ npm i
-$ ionic serve
+$ ionic serve or $ npm start
+$ ionic build --prod or $ npm run prod
 ```
 
 ---
