@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [2.0.1] - 2023-02-15
+- New README and Package.json infos
+
 ## [2.0.0] - 2023-02-14
 - Initial release for over years without updates. :P
 
