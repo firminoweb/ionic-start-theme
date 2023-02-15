@@ -5,8 +5,9 @@
   "homepage": "https://github.com/firminoweb/ionic-start-theme",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ionic serve",
     "build": "ng build",
+    "prod": "ionic build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
