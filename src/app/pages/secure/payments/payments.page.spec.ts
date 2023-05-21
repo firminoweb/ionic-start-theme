@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { IonRouterOutlet, IonicModule } from '@ionic/angular';
 
 import { PaymentsPage } from './payments.page';
 
@@ -10,7 +10,13 @@ describe('PaymentsPage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PaymentsPage ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot()],
+      providers: [
+        {
+          provide: IonRouterOutlet,
+          useValue: {},
+        },
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(PaymentsPage);
