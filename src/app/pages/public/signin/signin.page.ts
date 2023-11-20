@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.page.scss'],
 })
 export class SigninPage implements OnInit {
-
   current_year: number = new Date().getFullYear();
 
   signin_form: FormGroup;
@@ -23,14 +22,16 @@ export class SigninPage implements OnInit {
     private formBuilder: FormBuilder,
     private toastService: ToastService,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit() {
-
     // Setup form
     this.signin_form = this.formBuilder.group({
       email: ['', Validators.compose([Validators.email, Validators.required])],
-      password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
+      password: [
+        '',
+        Validators.compose([Validators.minLength(6), Validators.required]),
+      ],
     });
 
     // DEBUG: Prefill inputs
@@ -40,34 +41,55 @@ export class SigninPage implements OnInit {
 
   // Sign in
   async signIn() {
-
     this.submit_attempt = true;
 
     // If email or password empty
-    if (this.signin_form.value.email == '' || this.signin_form.value.password == '') {
-      this.toastService.presentToast('Error', 'Please input email and password', 'top', 'danger', 2000);
-
+    if (
+      this.signin_form.value.email === '' ||
+      this.signin_form.value.password === ''
+    ) {
+      this.toastService.presentToast(
+        'Error',
+        'Please input email and password',
+        'top',
+        'danger',
+        2000
+      );
     } else {
-
-      // Proceed with loading overlay
-      const loading = await this.loadingController.create({
-        cssClass: 'default-loading',
-        message: '<p>Signing in...</p><span>Please be patient.</span>',
-        spinner: 'crescent'
-      });
-      await loading.present();
-
-      // TODO: Add your sign in logic
-      // ...
-
-      // Fake timeout
-      setTimeout(async () => {
-        // Sign in success
-        await this.router.navigate(['/home']);
-        loading.dismiss();
-      }, 2000);
-
+      this.signInToFirebase();
     }
   }
 
+  async signInToFirebase() {
+    const loading = await this.loadingController.create({
+      cssClass: 'default-loading',
+      message: '<p>Signing in...</p><span>Please be patient.</span>',
+      spinner: 'crescent',
+    });
+    await loading.present();
+    if (this.signin_form?.valid) {
+      const user = await this.authService
+        .loginUser(
+          this.signin_form.value.email,
+          this.signin_form.value.password
+        )
+        .catch((error) => {
+          console.log(error);
+          loading.dismiss();
+        });
+
+      if (user) {
+        loading.dismiss();
+        this.router.navigate(['/home']);
+      } else {
+        this.toastService.presentToast(
+          'Error',
+          'Please input Correct values',
+          'top',
+          'danger',
+          2000
+        );
+      }
+    }
+  }
 }

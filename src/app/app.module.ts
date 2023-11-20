@@ -13,6 +13,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 // NgCharts
 import { NgChartsModule } from 'ng2-charts';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,9 +25,12 @@ import { NgChartsModule } from 'ng2-charts';
     IonicModule.forRoot(),
     ReactiveFormsModule,
     AppRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    AngularFireModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -20,11 +20,11 @@
       </ion-avatar>
 
       <h1>
-        <ion-text color="tertiary"><strong>John Doe</strong></ion-text>
+        <ion-text color="tertiary"><strong>{{user?.email }}</strong></ion-text>
       </h1>
 
       <p>
-        <ion-text color="medium">john.doe@mail.com</ion-text>
+        <ion-text color="medium">{{user?.providerData?.uid }}</ion-text>
       </p>
     </ion-card-content>
   </ion-card>

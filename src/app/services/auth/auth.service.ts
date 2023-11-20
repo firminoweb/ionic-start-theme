@@ -1,27 +1,46 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class AuthService {
+  constructor(private router: Router, private ngFireAuth: AngularFireAuth) {}
 
-  constructor(
-    private router: Router
-  ) { }
+  async registerUser(email: string, password: string) {
+    return await this.ngFireAuth.createUserWithEmailAndPassword(
+      email,
+      password
+    );
+  }
+
+  async loginUser(email: string, password: string) {
+    return await this.ngFireAuth.signInWithEmailAndPassword(email, password);
+  }
+
+  async resetPassword(email: string) {
+    return await this.ngFireAuth.sendPasswordResetEmail(email);
+  }
+
+  async signOut() {
+    return await this.ngFireAuth.signOut();
+  }
+
+  async getProfile(){
+     return await this.ngFireAuth.currentUser;
+  }
 
   // Get user session
   async getSession() {
-
     // ...
     // put auth session here
     // ...
 
     // Sample only - remove this after real authentication / session
     let session = {
-      email: 'john.doe@mail.com'
-    }
+      email: 'john.doe@mail.com',
+    };
 
     return false;
     // return session;
@@ -32,8 +51,8 @@ export class AuthService {
     // Sample only - remove this after real authentication / session
     let sample_user = {
       email: email,
-      password: password
-    }
+      password: password,
+    };
 
     return sample_user;
   }
@@ -43,19 +62,19 @@ export class AuthService {
     // Sample only - remove this after real authentication / session
     let sample_user = {
       email: email,
-      password: password
-    }
+      password: password,
+    };
 
     return sample_user;
   }
 
   // Sign out
-  async signOut() {
-    // ...
-    // clean subscriptions / local storage etc. here
-    // ...
+  // async signOut() {
+  //   // ...
+  //   // clean subscriptions / local storage etc. here
+  //   // ...
 
-    // Navigate to sign-in
-    this.router.navigateByUrl('/signin');
-  }
+  //   // Navigate to sign-in
+  //   this.router.navigateByUrl('/signin');
+  // }
 }
