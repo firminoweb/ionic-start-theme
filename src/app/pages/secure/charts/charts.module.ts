@@ -10,14 +10,15 @@ import { ChartsPage } from './charts.page';
 
 // NgCharts
 import { NgChartsModule } from 'ng2-charts';
-
+import { QRCodeModule } from 'angularx-qrcode';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     ChartsPageRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    QRCodeModule
   ],
   declarations: [ChartsPage]
 })

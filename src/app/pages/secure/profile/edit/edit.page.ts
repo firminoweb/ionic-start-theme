@@ -30,8 +30,8 @@ export class EditPage implements OnInit {
     });
 
     // DEBUG: Prefill inputs
-    this.edit_profile_form.get('name_first').setValue('John');
-    this.edit_profile_form.get('name_last').setValue('Doe');
+    this.edit_profile_form.get('name_first').setValue('Slim');
+    this.edit_profile_form.get('name_last').setValue('Nejmaoui');
   }
 
   // Update profile picture

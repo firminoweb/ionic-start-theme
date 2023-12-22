@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IonRouterOutlet, ModalController } from '@ionic/angular';
 import { FilterPage } from './filter/filter.page';
+import { DataService } from 'src/app/services/data/data.service';
+
 
 @Component({
   selector: 'app-payments',
@@ -14,15 +16,39 @@ export class PaymentsPage implements OnInit {
   constructor(
     private routerOutlet: IonRouterOutlet,
     private modalController: ModalController,
-  ) { }
-
+    private Service: DataService
+  ) {
+    this.fetchData();
+  }
+  async fetchData() {
+    try {
+      const res = await this.Service.getArticle();
+      this.data = res.value;
+      console.log(this.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+  chunkArray(array: any[], chunkSize: number): any[] {
+    const chunks = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      chunks.push(array.slice(i, i + chunkSize));
+    }
+    return chunks;
+  }
+  data: any;
   ngOnInit() {
 
     // Fake timeout
     setTimeout(() => {
       this.content_loaded = true;
     }, 2000);
+    this.fetchData()
+
+
+
   }
+
 
   // Filter
   async filter() {

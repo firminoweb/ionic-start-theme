@@ -3,5 +3,8 @@
 	"appName": "Ionic Start Theme",
 	"webDir": "www",
 	"bundledWebRuntime": false,
-	"ios": { "scheme": "Ionic Start Theme" }
+	"ios": { "scheme": "Ionic Start Theme" },
+	    "CapacitorHttp": {
+      "enabled": true
+    }
 }

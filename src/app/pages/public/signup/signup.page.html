@@ -1,63 +1,82 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="dark">
+<!-- <ion-header [translucent]="true">
+
+
+</ion-header> -->
+
+<ion-content id="signup" style="text-align: center;">
+  <ion-toolbar>
+    <ion-title>
+      Inscription
+    </ion-title>
     <ion-buttons slot="start">
-      <ion-back-button style="color: white;font-weight: 600;" text="Sign in" defaultHref="/signin"></ion-back-button>
+      <ion-back-button style="color: #523614 ;font-weight: 600;" defaultHref="/signin" text=""></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-  <div class="ion-padding ion-full-height ion-flex ion-flex-center">
-    <center><ion-img src="../../../../assets/logo.png" style="height: 150px;width: 150px;"></ion-img></center>
-    <div class="logo-container">
+    <div id="content" class="ion-padding ">
+      <!-- <div class="ion-padding ion-full-height ion-flex ion-flex-center"> -->
+      <!-- <center><ion-img src="../../../../assets/logo.png" style="height: 200px;width: 200px;"></ion-img></center> -->
+      <!-- <div class="logo-container">
       <h1 class="animate__animated animate__fadeInUp">
-        <ion-text color="light">Sign Up</ion-text>
+        <ion-text style="color:  #523614 !important;">Inscription</ion-text>
       </h1>
       <br>
       <br>
-      <!-- <p class="animate__animated animate__fadeInUp">
-        <ion-text color="secondary">Create a free account.</ion-text>
-      </p> -->
-    </div>
-
-
+    </div> -->
     <form class="form-default" [formGroup]="signup_form" (submit)="signUp()">
-      <ion-item color="dark" class="animate__animated animate__fadeInUp">
-        <ion-label position="floating">
-          <ion-icon name="mail" item-start></ion-icon>
-          Email
-        </ion-label>
-        <ion-input color="secondary" type="email" autocomplete="off" formControlName="email"></ion-input>
+      <br>
+      <ion-item class="animate__animated animate__fadeInUp">
+        <ion-input type="Nom" autocomplete="off" placeholder="Nom"></ion-input>
       </ion-item>
-
-      <ion-item color="dark" class="animate__animated animate__fadeInUp">
-        <ion-label position="floating">
-          <ion-icon name="lock-closed-outline"></ion-icon>
-          Password
-        </ion-label>
-        <ion-input color="secondary" formControlName="password" type="password" placeholder="Your password"></ion-input>
+      <ion-item class="animate__animated animate__fadeInUp">
+        <ion-input type="Prénom" autocomplete="off" placeholder="Prénom"></ion-input>
       </ion-item>
-
-      <ion-item color="dark" class="animate__animated animate__fadeInUp">
-        <ion-label position="floating">
-          <ion-icon name="lock-closed-outline"></ion-icon>
-          Password repeat
-        </ion-label>
-        <ion-input color="secondary" formControlName="password_repeat" type="password" placeholder="Password repeat"></ion-input>
+      <ion-item class="animate__animated animate__fadeInUp">
+        <ion-input type="Tel" autocomplete="off" placeholder="Tel"></ion-input>
       </ion-item>
+      <ion-item class="animate__animated animate__fadeInUp">
+        <ion-input type="Adresse" autocomplete="off" placeholder="Adresse"></ion-input>
+      </ion-item>
+      <ion-item class="animate__animated animate__fadeInUp">
+        <ion-input type="Magasin" autocomplete="off" placeholder="Magasin"></ion-input>
+      </ion-item>
+      <ion-item class="animate__animated animate__fadeInUp">
+        <ion-input type="Civilité" autocomplete="off" placeholder="Civilité"></ion-input>
+      </ion-item>
+      <ion-item class="animate__animated animate__fadeInUp">
 
-      <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="secondary">
-        Sign up free
+        <ion-input type="Gouvernorat" autocomplete="off" placeholder="Gouvernorat"></ion-input>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+        
+          <ion-input formControlName="password" type="password" placeholder="Your password"></ion-input>
+          </ion-item>
+          <ion-button class="ion-margin-top ion-button2" expand="block" size="medium">
+            Enregistrer
       </ion-button>
     </form>
 
-    <div class="ion-text-center ion-margin-top">
-      <ion-text color="medium">
-        <small>&copy;{{current_year}} Firmino.dev</small>
-      </ion-text>
-    </div>
-
-  </div>
-
+</div>
+<!-- </div> -->
 </ion-content>
+<!-- <ion-content>
+  <div style="border-bottom: solid 1px lightgray ; margin: bottom 20px;">
+    <ion-button (click)="createOpenDataBase()">Create/open Database</ion-button>
+    <ion-button (click)="createTable()">Create table</ion-button>
+  </div>
+  <div style="max-width: 200px;margin: auto;">
+    <ion-item>
+      <ion-input [(ngModel)]="book_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="book_price"></ion-input>
+    </ion-item>
+    <ion-button size="small" (click)="insertData()">Add record </ion-button>
+  </div>
+  <div style="border-top:solid 1px lightgray;">
+    <ion-button (click)="selectData()" style="margin-bottom: 20px;">Display</ion-button>
+  </div>
+  <div *ngFor="let b of bookData;let i=index">
+    <div>book name :{{b.book_name}}</div>
+    <div>book name :{{b.book_price}}</div>
+  </div>
+</ion-content> -->

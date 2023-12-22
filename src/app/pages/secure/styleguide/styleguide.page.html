@@ -1,4 +1,4 @@
-<ion-header collapse="fade" [translucent]="true">
+<!-- <ion-header collapse="fade" [translucent]="true">
   <ion-toolbar color="dark">
     <ion-title color="light">
       Style Guide
@@ -10,28 +10,24 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
+  <ion-toolbar style="text-align: center;font-weight: 600;">
+    <ion-title>
+      Nos catalogues
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/settings">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
   <div class="ion-padding">
-    <h2>
-      <ion-text color="tertiary">Sample Components</ion-text>
-    </h2>
 
-    <hr class="hr-medium">
 
-    <ion-card color="primary">
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
 
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card color="primary">
+    <!-- <ion-card>
       <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
       <ion-card-header>
         <ion-card-title>Card Title</ion-card-title>
@@ -41,71 +37,58 @@
       <ion-card-content>
         Here's a small text description for the card content. Nothing more, nothing less.
       </ion-card-content>
-    </ion-card>
+    </ion-card> -->
 
-    <ion-card color="primary">
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-list>
-          <ion-item color="primary">
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
-            </ion-thumbnail>
-            <ion-label>Item</ion-label>
-          </ion-item>
+    <div style="padding: 0px !important;"
+      style="padding: 0px !important;height: fit-content;width: fit-content;margin:0px;bottom:0px;">
+      <!-- <ion-card-content style="padding: 0px !important;height: fit-content;width: fit-content;margin:0px;bottom:0px;"> -->
+      <img src="../../../../assets/1.png" width="auto"
+        style="img: url('../../../../assets/1.png') no-repeat center center fixed !important;padding: 0px;">
+      <!-- </ion-card-content> -->
+    </div>
+    <br>
+    <div style="padding: 0px !important; border-radius: 25px;"
+      style="padding: 0px !important;height: fit-content;width: fit-content;margin:0px;bottom:0px;">
+      <!-- <ion-card-content style="padding: 0px !important;height: fit-content;width: fit-content;margin:0px;bottom:0px;"> -->
+      <img src="../../../../assets/2.png" width="auto"
+        style="img: url('../../../../assets/1.png') no-repeat center center fixed !important;padding: 0px;">
+      <!-- </ion-card-content> -->
+    </div>
+    <br>
+    <div style="padding: 0px !important;"
+      style="padding: 0px !important;height: fit-content;width: fit-content;margin:0px;bottom:0px;">
+      <!-- <ion-card-content style="padding: 0px !important;height: fit-content;width: fit-content;margin:0px;bottom:0px;"> -->
+      <img src="../../../../assets/3.png" width="auto"
+        style="img: url('../../../../assets/3.png') no-repeat center center fixed !important;padding: 0px;">
+      <!-- </ion-card-content> -->
+    </div>
 
-          <ion-item color="primary">
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
-            </ion-thumbnail>
-            <ion-label>Item</ion-label>
-          </ion-item>
 
-          <ion-item color="primary">
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
-            </ion-thumbnail>
-            <ion-label>Item</ion-label>
-          </ion-item>
-
-          <ion-item color="primary" lines="none">
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="../../../../assets/card-media.png" />
-            </ion-thumbnail>
-            <ion-label>Item</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-list class="item-card-list animate__animated animate__fadeIn ion-margin" lines="none">
-      <ion-item color="primary" button detail>
+    <!-- <ion-list class="item-card-list animate__animated animate__fadeIn ion-margin" lines="none">
+                                                                                                                                                                                                  <ion-item button detail>
         <ion-label color="medium">
           <h3>$12,123.99</h3>
           <p>Deutsche Bank AG</p>
         </ion-label>
       </ion-item>
 
-      <ion-item color="primary" button detail>
+      <ion-item button detail>
         <ion-label color="medium">
           <h3>$255,000</h3>
           <p>Bitcoin</p>
         </ion-label>
       </ion-item>
 
-      <ion-item color="primary" button detail>
+      <ion-item button detail>
         <ion-label color="medium">
           <h3>$1,500.00</h3>
           <p>PayPal</p>
         </ion-label>
       </ion-item>
-    </ion-list>
-
+    </ion-list> -->
+    <!-- 
     <ion-list class="list-custom animate__animated animate__fadeIn ion-margin" lines="full">
-      <ion-item color="primary" button detail="false">
+      <ion-item button detail="false">
         <ion-avatar slot="start" class="ion-avatar-default-icon">
           <ion-icon color="tertiary" size="large" name="cafe-outline"></ion-icon>
         </ion-avatar>
@@ -117,7 +100,7 @@
         <ion-badge color="danger" slot="end">- $7.50</ion-badge>
       </ion-item>
 
-      <ion-item color="primary" button detail="false">
+      <ion-item button detail="false">
         <ion-avatar slot="start" class="ion-avatar-default-icon">
           <ion-icon color="tertiary" size="large" name="cash-outline"></ion-icon>
         </ion-avatar>
@@ -129,7 +112,7 @@
         <ion-badge color="secondary" slot="end">$7500</ion-badge>
       </ion-item>
 
-      <ion-item color="primary" button detail="false">
+      <ion-item button detail="false">
         <ion-avatar slot="start" class="ion-avatar-default-icon">
           <ion-icon color="tertiary" size="large" name="home-outline"></ion-icon>
         </ion-avatar>
@@ -140,9 +123,9 @@
         </ion-label>
         <ion-badge color="danger" mode="ios" slot="end">- $1800.00</ion-badge>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 
-    <hr class="hr-medium">
+
 
   </div>
 </ion-content>

@@ -1,6 +1,6 @@
 :host {
 #login{
-  background:url("https://github.com/ineslehbib/ionic-start-theme/blob/Ines-lahbib/src/assets/background.png") no-repeat center center;
+  background: url("../../../../assets/background.png") no-repeat center center !important;
 }
     .logo-container {
         text-align: center;
@@ -15,13 +15,29 @@
     }
  #login-content {
    background-color: #eac24d;
-   height: 74vh;
-   width: 100%;
-   max-width: 500px;
-   right: 0;
-   left: 0;
-   bottom: 0;
+  height: 60vh;
+    width: 100%;
+right: 0;
+  left: 0;
+  bottom: 0;
    position: fixed;
+  border-top-right-radius: 46px;
+    border-top-left-radius: 46px;
+    padding-top: 100px;
+  }
+  
+  form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  ion-item {
+    border-radius: 15px;
+  }
+  
+  .ion-button1 {
+    background-color: rgba(6, 186, 77, 255) !important;
+    border-radius: 15px;
 }
 }
                           

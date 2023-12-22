@@ -1,18 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="dark">
-    <ion-buttons slot="end">
-      <ion-button routerLink="/signup" style="color: white;font-weight: 600;">
-        Sign up
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content id="login">
+<ion-content>
 
   <div class="ion-padding ion-full-height ion-flex ion-flex-center">
-  <!-- <center><ion-img src="../../../../assets/logo.png" style="height: 300px;width: 350px;"></ion-img></center>
-   -->
+  <ion-img src="../../../../assets/logo.png" style="height: 300px;width: 350px;"></ion-img>
 
     <!-- Login form -->
   <div id="login-content">
@@ -20,28 +9,35 @@
         <form class="form-default" [formGroup]="signin_form" (submit)="signIn()">
           <ion-item class="animate__animated animate__fadeInUp">
             <ion-label position="floating">
-              <ion-icon name="mail" item-start></ion-icon>
-              Email
+              <ion-icon name="card-outline"></ion-icon>
+              Numéro de la carte
             </ion-label>
-            <ion-input type="email" formControlName="email"></ion-input>
+            <ion-input type="Integer" formControlName="email"></ion-input>
             </ion-item>
+            <br>
             <ion-item class="animate__animated animate__fadeInUp">
               <ion-label position="floating">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                Password
+              Mot de passe
               </ion-label>
-              <ion-input color="secondary" formControlName="password" type="password" placeholder="Your password"></ion-input>
+              <ion-input color="secondary" formControlName="password" type="password" placeholder="Mot de passe"></ion-input>
             </ion-item>
-          <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="secondary">
-            Sign in
-          </ion-button>
-          <ion-button color="light" fill="clear" expand="block" class="ion-button-small ion-margin-top-medium"
+            <br>
+            <ion-button class="ion-button-small ion-margin-top-medium ion-button1" type="submit" expand="block" size="medium"
+              color="light" fill="clear">
+              Accéder
+            </ion-button>
+            <!-- <ion-button class="ion-button-small ion-margin-top-medium ion-button1" routerLink="/home" expand="block" size="medium"
+                          color="light" fill="clear">
+                          Accéder
+                        </ion-button> -->
+            <!-- <ion-button color="light" fill="clear" expand="block" class="ion-button-small ion-margin-top-medium"
             routerLink="/password-reset">
             Forgot password?
-          </ion-button>
+          </ion-button> -->
           </form>
               <div class="ion-text-center ion-margin-top">
-      <ion-text color="medium">
+      <ion-text color="light">
         <small>Deltasoft International</small>
       </ion-text>
     </div>
@@ -49,4 +45,4 @@
     </div>
 
   </div>
-  </ion-content>
+</ion-content>

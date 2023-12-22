@@ -3,41 +3,26 @@
   <swiper class="swiper-welcome" #swiper [config]="config" (slideChange)="swiperSlideChanged($event)"
     (reachEnd)="onLastSlide()">
     <ng-template swiperSlide>
-      <ion-img src="../../../../assets/logo.png" width="150" height="150"></ion-img>
+<div id="content" class="animate__animated animate__fadeInUp">
+  <ion-button class="ion-button-small ion-margin-top-medium ion-button-1" (click)="getStarted()" expand="block"
+    size="medium" color="light" fill="clear">
+    Entrer
+  </ion-button>
+  <br>
+  <ion-button class="ion-button-small ion-margin-top-medium " routerLink="/signup" expand="block" size="medium"
+    id="Inscrire" fill="clear">
+    Inscrire
+  </ion-button>
 
-      <h3 class="animate__animated animate__fadeInUp">
-        <ion-text color="light">Welcome</ion-text>
-      </h3>
-      <!-- <p class="animate__animated animate__fadeInUp">
-        <ion-text color="medium">Latest Ionic version starter theme. Experiencing the best of new features to start your project.</ion-text>
-      </p> -->
+</div>
     </ng-template>
 
-    <ng-template swiperSlide>
-      <ion-img src="../../../../assets/logo.png" width="150" height="150"></ion-img>>
+  
 
-      <h3 class="animate__animated animate__fadeInUp">
-        <ion-text color="light">Ben Yaghlane</ion-text>
-      </h3>
-      <!-- <p class="animate__animated animate__fadeInUp">
-        <ion-text color="medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio mollitia sed sint quod, repellendus illum ex, doloribus, quis ipsam officiis hic saepe commodi? Ab porro laboriosam totam iure et.</ion-text>
-      </p> -->
-    </ng-template>
-
-    <ng-template swiperSlide>
-      <ion-img src="../../../../assets/logo.png" width="150" height="150"></ion-img>
-
-      <h3 class="animate__animated animate__fadeInUp">
-        <ion-text color="light">Welcome</ion-text>
-      </h3>
-      <!-- <p class="animate__animated animate__fadeInUp">
-        <ion-text color="medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio mollitia sed sint quod, repellendus illum ex, doloribus, quis ipsam officiis hic saepe commodi? Ab porro laboriosam totam iure et.</ion-text>
-      </p> -->
-    </ng-template>
   </swiper>
 </ion-content>
 
-<ion-footer class="ion-padding-bottom-large animate__animated animate__fadeInUp">
+<!-- <ion-footer class="ion-padding-bottom-large animate__animated animate__fadeInUp">
   <ion-button class="ion-margin" expand="block" size="large" color="secondary" (click)="nextSlide()" *ngIf="!last_slide">
     Next
     <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
@@ -45,4 +30,4 @@
   <ion-button class="ion-margin" expand="block" size="large" color="secondary" (click)="getStarted()" *ngIf="last_slide">
     Get started
   </ion-button>
-</ion-footer>
+</ion-footer> -->

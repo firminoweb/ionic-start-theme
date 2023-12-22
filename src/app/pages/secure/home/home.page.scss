@@ -1,5 +1,37 @@
 :host {
+  ion-header {
+      background: #eac24d !important;
+    }
+  
+    ion-toolbar {
+      --background: #eac24d !important;
+    }
+  
+    body {
+      --background: #eac24d !important;
+    }
   ion-list {
     background-color: var(--ion-color-primary);
   }
+                                                                ion-content {
+                                                                  background-color: #eac24d !important;
+                                                                  --background: #eac24d !important;
+                                                                }
+                                
+                                                                body {
+                                                                  background: #eac24d !important;
+                                                                }
+                                
+                                                                ion-header {
+                                                                  background-color: #eac24d !important;
+}
+
+ion-title {
+  color: #523614;
+}
+
+// ion-button {
+//   background-color: white !important;
+//   border-radius: 15px !important;
+// }
 }

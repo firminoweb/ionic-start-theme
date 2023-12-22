@@ -1,74 +1,80 @@
-<ion-header collapse="fade" [translucent]="true">
-  <ion-toolbar color="dark">
+<ion-content [fullscreen]="true">
+  <ion-toolbar style="color:#523614 ;">
     <ion-buttons slot="start">
-      <ion-back-button color="secondary" text="Back" defaultHref="/home">
+      <ion-back-button text="" defaultHref="/home">
       </ion-back-button>
     </ion-buttons>
 
-    <ion-title color="light">
-      Settings
+    <ion-title style="padding-left: 30%;">
+      Paramètres
     </ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-
-  <ion-card class="ion-no-margin profile-card">
-    <ion-card-content>
-      <ion-avatar>
-        <img src="../../../../assets/card-media.png">
-      </ion-avatar>
-
+  <ion-card class="ion-no-margin profile-card" style="text-align: center;">
+    <ion-card-content style="text-align: center;">
+      <div style="text-align: center !important;">
+        <img src="../../../../assets/card-media.png" height="150" width="150">
+      </div>
       <h1>
-        <ion-text color="tertiary"><strong>John Doe</strong></ion-text>
-      </h1>
+        <ion-text><strong>Numéro : {{no}}</strong></ion-text>
+        </h1>
+        <h1>
+          <ion-text><strong>Adhérant : {{nom}}</strong></ion-text>
+        </h1>
+        <h1>
+          <ion-text><strong>Vous avez : {{total}}</strong></ion-text>
+        </h1>
 
-      <p>
-        <ion-text color="medium">john.doe@mail.com</ion-text>
-      </p>
+        <!-- <ngx-gauge [type]="'full'" [value]="calculatePercentage()"></ngx-gauge> -->
     </ion-card-content>
+    <div class="gauge-container">
+      <div class="indicator-min">{{ 0 }}</div>
+      <div class="indicator-max">{{ total }}</div>
+      <div class="indicator-value">{{ consomme }} Point</div>
+      <div class="gauge-fill" [style.width.%]="fillPercentage"></div>
+    </div>
   </ion-card>
 
   <div class="ion-padding">
 
-    <ion-list-header class="ion-list-header-small">
+    <!-- <ion-list-header class="ion-list-header-small">
       <ion-label>
-        <ion-text color="tertiary">Personal</ion-text>
+        <ion-text style="color:#523614 ;">Personal</ion-text>
       </ion-label>
-    </ion-list-header>
+    </ion-list-header> -->
 
     <ion-list lines="full">
-      <ion-item color="primary" button routerLink="profile/edit">
-        <ion-icon slot="start" color="medium" name="person"></ion-icon>
+      <ion-item button routerLink="profile/edit">
+        <ion-icon slot="start" name="person"></ion-icon>
         <ion-label>
           <h3>Profile</h3>
         </ion-label>
       </ion-item>
-      <ion-item color="primary" button routerLink="account">
-        <ion-icon slot="start" color="medium" name="person-circle"></ion-icon>
+      <!-- <ion-item button routerLink="account">
+                                                                                                                                                                                                                                      <ion-icon slot="start" name="person-circle"></ion-icon>
         <ion-label>
           <h3>Account settings</h3>
         </ion-label>
-      </ion-item>
+      </ion-item> -->
     </ion-list>
 
-    <hr class="hr-medium">
-
+    <!-- <hr class="hr-medium"> -->
+    <!-- 
     <ion-list-header class="ion-list-header-small">
       <ion-label>
-        <ion-text color="tertiary">Synchronisation</ion-text>
+        <ion-text style="color:#523614 ;">Synchronisation</ion-text>
       </ion-label>
     </ion-list-header>
 
     <ion-list class="list-custom" lines="full">
-      <ion-item color="primary" detail="false">
+      <ion-item detail="false">
         <ion-icon slot="start" color="medium" name="scan"></ion-icon>
         <ion-label>
           <h3>Smart sync</h3>
         </ion-label>
-        <ion-toggle color="tertiary" checked slot="end"></ion-toggle>
+        <ion-toggle checked slot="end"></ion-toggle>
       </ion-item>
-      <ion-item color="primary" button routerLink="devices">
+      <ion-item button routerLink="devices">
         <ion-icon slot="start" color="medium" name="phone-portrait"></ion-icon>
         <ion-label>
           <h3>Registered devices</h3>
@@ -79,44 +85,43 @@
 
     <p>
       <ion-text color="medium">Smart Sync synchronises banking data safely between all your registered devices.</ion-text>
-    </p>
+    </p> -->
 
-    <hr class="hr-medium">
 
-    <ion-list-header class="ion-list-header-small">
+    <!-- <ion-list-header class="ion-list-header-small">
       <ion-label>
-        <ion-text color="tertiary">Security</ion-text>
+        <ion-text style="color:#523614 ;">Security</ion-text>
       </ion-label>
-    </ion-list-header>
+    </ion-list-header> -->
 
-    <ion-list lines="full">
-      <ion-item color="primary" button>
+    <!-- <ion-list lines="full">
+                                                                                                                                                                              <ion-item button>
         <ion-icon slot="start" color="medium" name="lock-closed"></ion-icon>
         <ion-label>
           <h3>Master password</h3>
         </ion-label>
       </ion-item>
-      <ion-item color="primary" detail="false">
+      <ion-item detail="false">
         <ion-icon slot="start" color="medium" name="scan"></ion-icon>
         <ion-label>
           <h3>Face ID</h3>
         </ion-label>
         <ion-toggle color="tertiary" slot="end"></ion-toggle>
       </ion-item>
-      <ion-item color="primary" button routerLink="backups">
+      <ion-item button routerLink="backups">
         <ion-icon slot="start" color="medium" name="cloud-circle"></ion-icon>
         <ion-label>
           <h3>Backups</h3>
         </ion-label>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 
     <hr class="hr-medium">
 
     <ion-list class="list-custom" lines="full" (click)="signOut()">
-      <ion-item color="primary" button detail=false>
-        <ion-icon slot="start" color="light" name="log-out"></ion-icon>
-        <ion-label color="light">
+      <ion-item button detail=false>
+        <ion-icon slot="start" name="log-out"></ion-icon>
+        <ion-label>
           <h3>Sign out</h3>
         </ion-label>
       </ion-item>

@@ -5,7 +5,7 @@ app-welcome {
   background-color: var(--ion-color-dark);
 }
 
-app-welcome ion-content {
+app-welcome {
   --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
 }
 
@@ -65,4 +65,40 @@ app-welcome .swiper-pagination-bullet-active {
 
 app-welcome ion-footer {
   background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+}
+swiper {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url("../../../../assets/welcome.png") no-repeat center center fixed !important;
+  background-size: 100% 100% !important;
+
+}
+
+#content {
+
+  background-color: #eac24d;
+  height: 35vh;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  border-top-right-radius: 46px;
+  border-top-left-radius: 46px;
+  padding-top: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.ion-button-1 {
+  background-color: rgba(6, 186, 77, 255) !important;
+  border-radius: 15px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+#Inscrire {
+  background-color: white !important;
+  border-radius: 15px;
+  color: #523614 !important;
 }

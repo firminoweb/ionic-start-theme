@@ -7,11 +7,50 @@
   .form-default {
     margin-top: 20px;
   }
+        ion-text {
+          color: white;
+        }
+    
+        ion-header {
+          background: #eac24d !important;
+        }
+    
+        ion-toolbar {
+          --background: #eac24d !important;
+        }
+    
+        body {
+          --background: #eac24d !important;
+        }
+    
+        ion-content {
+          --background: #eac24d !important;
+        }
+    
+    
+        ion-list {
+          border-radius: 8px;
+          margin-bottom: 8px;
+          --background: #eac24d !important;
+        }
+    
+        ion-label {
+          font-size: 16px;
+          font-weight: 700;
+        }
+    
+        ion-searchbar {
+          background: #eac24d !important;
+          color: #523614;
+        }
+        }
+    
+        ion-card {
 }
 
 .profile-card {
   border-radius: 0;
-  background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+  background: transparent;
   width: 100%;
   display: flex;
   justify-content: center;

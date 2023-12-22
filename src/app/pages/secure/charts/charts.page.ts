@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartOptions, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { HelperService } from 'src/app/services/helper/helper.service';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-charts',
@@ -197,14 +198,20 @@ export class ChartsPage implements OnInit {
   public polarAreaChartType: ChartType = 'polarArea';
 
   content_loaded: boolean = false;
-
+  qrCode;
   constructor(
-    private helperService: HelperService
-  ) { }
+    private helperService: HelperService, private Service: DataService
+  ) {
+    this.qrCode = '9800102200305';
+    console.log(sessionStorage.getItem('No'));
+  }
 
+  data: any;
   ngOnInit() {
     // Create bar chart
     this.createBarChart();
+
+
   }
 
   ionViewDidEnter() {
@@ -247,4 +254,6 @@ export class ChartsPage implements OnInit {
       }
     ];
   }
+
+
 }
