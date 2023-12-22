@@ -1,37 +1,38 @@
 <ion-content>
+
   <swiper class="swiper-welcome" #swiper [config]="config" (slideChange)="swiperSlideChanged($event)"
     (reachEnd)="onLastSlide()">
     <ng-template swiperSlide>
-      <ion-icon name="logo-ionic" class="animate__animated animate__fadeInDown"></ion-icon>
+      <ion-img src="../../../../assets/logo.png" width="150" height="150"></ion-img>
 
       <h3 class="animate__animated animate__fadeInUp">
-        <ion-text color="light">Ionic Start Theme</ion-text>
+        <ion-text color="light">Welcome</ion-text>
       </h3>
-      <p class="animate__animated animate__fadeInUp">
+      <!-- <p class="animate__animated animate__fadeInUp">
         <ion-text color="medium">Latest Ionic version starter theme. Experiencing the best of new features to start your project.</ion-text>
-      </p>
+      </p> -->
     </ng-template>
 
     <ng-template swiperSlide>
-      <ion-icon name="logo-capacitor" class="animate__animated animate__fadeInDown"></ion-icon>
+      <ion-img src="../../../../assets/logo.png" width="150" height="150"></ion-img>>
 
       <h3 class="animate__animated animate__fadeInUp">
-        <ion-text color="light">Capacitor Ready</ion-text>
+        <ion-text color="light">Ben Yaghlane</ion-text>
       </h3>
-      <p class="animate__animated animate__fadeInUp">
+      <!-- <p class="animate__animated animate__fadeInUp">
         <ion-text color="medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio mollitia sed sint quod, repellendus illum ex, doloribus, quis ipsam officiis hic saepe commodi? Ab porro laboriosam totam iure et.</ion-text>
-      </p>
+      </p> -->
     </ng-template>
 
     <ng-template swiperSlide>
-      <ion-icon name="stats-chart" class="animate__animated animate__fadeInDown"></ion-icon>
+      <ion-img src="../../../../assets/logo.png" width="150" height="150"></ion-img>
 
       <h3 class="animate__animated animate__fadeInUp">
-        <ion-text color="light">Components Sample</ion-text>
+        <ion-text color="light">Welcome</ion-text>
       </h3>
-      <p class="animate__animated animate__fadeInUp">
+      <!-- <p class="animate__animated animate__fadeInUp">
         <ion-text color="medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio mollitia sed sint quod, repellendus illum ex, doloribus, quis ipsam officiis hic saepe commodi? Ab porro laboriosam totam iure et.</ion-text>
-      </p>
+      </p> -->
     </ng-template>
   </swiper>
 </ion-content>

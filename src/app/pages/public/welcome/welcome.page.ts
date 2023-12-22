@@ -1,6 +1,7 @@
 import { AfterContentChecked, ChangeDetectorRef, Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
 import SwiperCore, { SwiperOptions, Pagination } from 'swiper';
+import { IonImg } from '@ionic/angular';
 SwiperCore.use([Pagination]);
 
 import { Router } from '@angular/router';
